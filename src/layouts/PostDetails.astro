@@ -12,6 +12,7 @@ import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
+import IconEdit from "@/assets/icons/IconEdit.svg";
 import { SITE } from "@/config";
 
 type Props = {
@@ -95,8 +96,13 @@ const nextPost =
     >
       {title}
     </h1>
-    <div class="my-2 flex items-center gap-2">
+    <div class="my-2 flex items-center gap-2 text-sm sm:text-base">
       <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
+      <span aria-hidden="true" class="opacity-80">|</span>
+      <span class="flex items-center gap-x-2 opacity-80">
+        <IconEdit class="inline-block size-6 min-w-5.5" />
+        Written by {author}
+      </span>
       <span
         aria-hidden="true"
         class:list={[

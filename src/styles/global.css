@@ -30,19 +30,19 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
-  --muted: #e6e6e6;
-  --border: #ece9e9;
+  --background: #eceff4; /* Nord 6 - Snow Storm */
+  --foreground: #2e3440; /* Nord 0 - Polar Night */
+  --accent: #5e81ac; /* Nord 10 - Frost */
+  --muted: #d8dee9; /* Nord 4 - Snow Storm */
+  --border: #d8dee9; /* Nord 4 - Snow Storm */
 }
 
 html[data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --muted: #343f60;
-  --border: #ab4b08;
+  --background: #2e3440; /* Nord 0 - Polar Night */
+  --foreground: #eceff4; /* Nord 6 - Snow Storm */
+  --accent: #88c0d0; /* Nord 8 - Frost */
+  --muted: #434c5e; /* Nord 2 - Polar Night */
+  --border: #3b4252; /* Nord 1 - Polar Night */
 }
 
 @theme inline {
