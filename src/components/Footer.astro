@@ -23,10 +23,27 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
     ]}
   >
     <Socials />
-    <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
-      <span>Copyright &#169; {currentYear}</span>
+    <div
+      class="my-2 flex flex-col items-center gap-1 whitespace-nowrap sm:grid sm:grid-cols-[auto_auto_auto] sm:gap-0 sm:gap-y-1"
+    >
+      <span class="sm:text-right">Copyright &#169; {currentYear}</span>
       <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
       <span>All rights reserved.</span>
+
+      <a
+        href="https://icp.gov.moe/?keyword=20254590"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="transition-colors hover:text-accent sm:text-right"
+        >萌ICP备20254590号</a
+      >
+      <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
+      <a
+        href="https://beian.miit.gov.cn/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="transition-colors hover:text-accent">沪ICP备2025133897号</a
+      >
     </div>
   </div>
 </footer>

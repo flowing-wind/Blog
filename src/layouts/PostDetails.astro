@@ -6,7 +6,6 @@ import Footer from "@/components/Footer.astro";
 import Tag from "@/components/Tag.astro";
 import Datetime from "@/components/Datetime.astro";
 import EditPost from "@/components/EditPost.astro";
-import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
 import { getPath } from "@/utils/getPath";
@@ -124,7 +123,19 @@ const nextPost =
 
     <BackToTopButton />
 
-    <ShareLinks />
+    <div
+      class="flex flex-none flex-col items-center justify-center md:items-start"
+    >
+      <span class="italic">
+        This post is licensed under <a
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline decoration-dashed underline-offset-4 hover:text-accent"
+          >CC BY-NC-SA 4.0</a
+        >.
+      </span>
+    </div>
 
     <hr class="my-6 border-dashed" />
 
