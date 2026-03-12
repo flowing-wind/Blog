@@ -4,6 +4,9 @@ on:
   push:
     branches: [ main ]
 
+  repository_dispatch:
+    types: [ content_updated ]
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -14,6 +17,11 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+          ref: main
+
+      - name: Update Submodules
+        run: |
+          git submodule update --remote --recursive
 
       - name: Setup Node
         uses: actions/setup-node@v4
