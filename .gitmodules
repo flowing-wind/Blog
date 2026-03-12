@@ -1,0 +1,3 @@
+[submodule "src/data/blog/Fuuraiko"]
+	path = src/data/blog/Fuuraiko
+	url = https://github.com/flowing-wind/Blog_Content.git
