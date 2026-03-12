@@ -65,7 +65,7 @@ export default defineConfig({
       name: "Google Sans Code",
       cssVariable: "--font-google-sans-code",
       provider: fontProviders.google(),
-      fallbacks: ["LXGW WenKai Mono", "monospace"],
+      fallbacks: ["Microsoft YaHei", "微软雅黑", "monospace"],
       weights: [300, 400, 500, 600, 700],
       styles: ["normal", "italic"],
     },

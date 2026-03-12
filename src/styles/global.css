@@ -1,52 +1,37 @@
 @import "tailwindcss";
 @import "./typography.css";
 
-/* 引入本地的中文字体 */
-@font-face {
-  font-family: 'LXGW WenKai Mono';
-  src: url('/fonts/LXGWWenKaiMono-Light.woff2') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'LXGW WenKai Mono';
-  src: url('/fonts/LXGWWenKaiMono-Regular.woff2') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'LXGW WenKai Mono';
-  src: url('/fonts/LXGWWenKaiMono-Medium.woff2') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root,
 html[data-theme="light"] {
-  --background: #eceff4; /* Nord 6 - Snow Storm */
-  --foreground: #2e3440; /* Nord 0 - Polar Night */
-  --accent: #5e81ac; /* Nord 10 - Frost */
-  --muted: #d8dee9; /* Nord 4 - Snow Storm */
-  --border: #d8dee9; /* Nord 4 - Snow Storm */
+  --background: #eceff4;
+  /* Nord 6 - Snow Storm */
+  --foreground: #2e3440;
+  /* Nord 0 - Polar Night */
+  --accent: #5e81ac;
+  /* Nord 10 - Frost */
+  --muted: #d8dee9;
+  /* Nord 4 - Snow Storm */
+  --border: #d8dee9;
+  /* Nord 4 - Snow Storm */
 }
 
 html[data-theme="dark"] {
-  --background: #2e3440; /* Nord 0 - Polar Night */
-  --foreground: #eceff4; /* Nord 6 - Snow Storm */
-  --accent: #88c0d0; /* Nord 8 - Frost */
-  --muted: #434c5e; /* Nord 2 - Polar Night */
-  --border: #3b4252; /* Nord 1 - Polar Night */
+  --background: #2e3440;
+  /* Nord 0 - Polar Night */
+  --foreground: #eceff4;
+  /* Nord 6 - Snow Storm */
+  --accent: #88c0d0;
+  /* Nord 8 - Frost */
+  --muted: #434c5e;
+  /* Nord 2 - Polar Night */
+  --border: #3b4252;
+  /* Nord 1 - Polar Night */
 }
 
 @theme inline {
-  --font-app: var(--font-google-sans-code);
+  --font-app: var(--font-google-sans-code), "Microsoft YaHei", "微软雅黑";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
