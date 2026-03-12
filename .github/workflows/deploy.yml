@@ -31,6 +31,7 @@ jobs:
         with:
           switches: -avzr --delete # 增量同步并删除服务器上多余的文件
           path: dist/
+          remote_port: 202
           remote_path: /var/www/Blog
           remote_host: ${{ secrets.SERVER_HOST }}
           remote_user: ${{ secrets.SERVER_USER }}
