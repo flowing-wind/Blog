@@ -1,3 +1,6 @@
 [submodule "src/data/blog/Fuuraiko"]
 	path = src/data/blog/Fuuraiko
 	url = https://github.com/flowing-wind/Blog_Content.git
+[submodule "src/data/blog/Maxim"]
+	path = src/data/blog/Maxim
+	url = https://github.com/404NotFound-Error/Blog_Content.git
