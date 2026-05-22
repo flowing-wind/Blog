@@ -1,14 +1,16 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 import Socials from "./Socials.astro";
-
-const currentYear = new Date().getFullYear();
+import { useTranslations } from "@/i18n";
 
 type Props = {
   noMarginTop?: boolean;
 } & HTMLAttributes<"footer">;
 
 const { noMarginTop = false, class: className, ...attrs } = Astro.props;
+
+const t = useTranslations(Astro.currentLocale);
+const currentYear = new Date().getFullYear();
 ---
 
 <footer
@@ -16,19 +18,15 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
   {...attrs}
 >
   <div
-    class:list={[
-      "py-6 sm:py-4",
-      "border-t border-border",
-      "flex flex-col items-center justify-between sm:flex-row-reverse",
-    ]}
+    class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"
   >
     <Socials />
     <div
       class="my-2 flex flex-col items-center gap-1 whitespace-nowrap sm:grid sm:grid-cols-[auto_auto_auto] sm:gap-0 sm:gap-y-1"
     >
-      <span class="sm:text-right">Copyright &#169; {currentYear}</span>
+      <span class="sm:text-right">{t.footer.copyright} &#169; {currentYear}</span>
       <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
-      <span>All rights reserved.</span>
+      <span>{t.footer.allRightsReserved}</span>
 
       <a
         href="https://icp.gov.moe/?keyword=20254590"
